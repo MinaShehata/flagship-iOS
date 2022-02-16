@@ -34,16 +34,11 @@ extension UIViewController: SFSafariViewControllerDelegate {
         }
     }
     
-//    func StartChangeLanguage() {
-//        let size = CGSize(width: 50, height: 50)
-//        NVActivityIndicatorView.DEFAULT_COLOR = .mainColor
-//        NVActivityIndicatorView.DEFAULT_BLOCKER_BACKGROUND_COLOR = .mainColor
-//        self.startAnimating(size, message: "Changing Language......".Localize, type: NVActivityIndicatorType.ballZigZag)
-//    }
-//    func finishChangeLanguage() {
-//        self.stopAnimating()
-//    }
-    
+    func add(child: UIViewController, at containerView: UIStackView, atFront: Bool = true) {
+        containerView.addArrangedSubview(child.view)
+        addChild(child)
+        child.didMove(toParent: self)
+    }
     
         //MARK:-  thumbnail image for video
     public func thumbnailImageViewForUrl(url: URL) -> UIImage? {

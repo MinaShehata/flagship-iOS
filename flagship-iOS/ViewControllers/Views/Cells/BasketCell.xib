@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="BasketCell" customModule="flagship_iOS" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="64" height="104"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="64" height="104"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JTS-zA-0RA" customClass="UIViewX" customModule="flagship_iOS" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="64" height="64"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Chw-Qa-Ida" customClass="CustomImageView" customModule="flagship_iOS" customModuleProvider="target">
+                                <rect key="frame" x="12" y="12" width="40" height="40"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="Chw-Qa-Ida" secondAttribute="bottom" constant="12" id="5NR-lF-bZ7"/>
+                            <constraint firstItem="Chw-Qa-Ida" firstAttribute="leading" secondItem="JTS-zA-0RA" secondAttribute="leading" constant="12" id="Gvo-Ul-ChH"/>
+                            <constraint firstItem="Chw-Qa-Ida" firstAttribute="top" secondItem="JTS-zA-0RA" secondAttribute="top" constant="12" id="hM3-UD-RH0"/>
+                            <constraint firstAttribute="height" constant="64" id="uM2-kj-tiT"/>
+                            <constraint firstAttribute="width" constant="64" id="vPU-pl-CE7"/>
+                            <constraint firstAttribute="trailing" secondItem="Chw-Qa-Ida" secondAttribute="trailing" constant="12" id="yw6-ve-Bde"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="32"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="defaultShadow" value="YES"/>
+                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                <color key="value" name="KDarkColor"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                <real key="value" value="1"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sary" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="65v-3E-FDl">
+                        <rect key="frame" x="0.0" y="64" width="64" height="40"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="40" id="unR-aH-gvc"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" name="KBlackColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="JTS-zA-0RA" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="KXZ-ip-fO0"/>
+                <constraint firstAttribute="trailing" secondItem="JTS-zA-0RA" secondAttribute="trailing" id="LLx-Gt-Due"/>
+                <constraint firstAttribute="trailing" secondItem="65v-3E-FDl" secondAttribute="trailing" id="dUd-Jk-aFD"/>
+                <constraint firstAttribute="bottom" secondItem="65v-3E-FDl" secondAttribute="bottom" id="fBc-qy-CwC"/>
+                <constraint firstItem="65v-3E-FDl" firstAttribute="top" secondItem="JTS-zA-0RA" secondAttribute="bottom" id="fhg-om-h4b"/>
+                <constraint firstItem="JTS-zA-0RA" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="u3O-cb-6Lu"/>
+                <constraint firstItem="65v-3E-FDl" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="xEt-fF-NDk"/>
+            </constraints>
+            <size key="customSize" width="104" height="186"/>
+            <connections>
+                <outlet property="basketItemImageView" destination="Chw-Qa-Ida" id="XfX-Ut-h7Z"/>
+                <outlet property="basketTitleLabel" destination="65v-3E-FDl" id="E5W-rd-JLC"/>
+            </connections>
+            <point key="canvasLocation" x="176.81159420289856" y="131.25"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <namedColor name="KBlackColor">
+            <color red="0.10980392156862745" green="0.11764705882352941" blue="0.12941176470588237" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="KDarkColor">
+            <color red="0.7686274509803922" green="0.7686274509803922" blue="0.7686274509803922" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

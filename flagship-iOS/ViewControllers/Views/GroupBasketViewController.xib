@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GroupBasketViewController" customModule="flagship_iOS" customModuleProvider="target">
+            <connections>
+                <outlet property="collectionView" destination="385-j2-6Mw" id="By9-sZ-C3h"/>
+                <outlet property="nameLabel" destination="wwT-LN-3hB" id="Q4k-mQ-94w"/>
+                <outlet property="view" destination="rtH-ry-Fak" id="EUQ-EV-zRU"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="rtH-ry-Fak">
+            <rect key="frame" x="0.0" y="0.0" width="395" height="602"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="385-j2-6Mw" customClass="ResizableCollectionView" customModule="flagship_iOS" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="90" width="395" height="501"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="BDz-qn-rXz">
+                        <size key="itemSize" width="128" height="128"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wwT-LN-3hB">
+                    <rect key="frame" x="25" y="55" width="345" height="24"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                    <color key="textColor" name="KBlackColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="Ebr-JT-d50"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="wwT-LN-3hB" firstAttribute="leading" secondItem="Ebr-JT-d50" secondAttribute="leading" constant="25" id="7x0-xv-ba7"/>
+                <constraint firstItem="Ebr-JT-d50" firstAttribute="bottom" secondItem="385-j2-6Mw" secondAttribute="bottom" constant="11" id="B3Z-9P-uzK"/>
+                <constraint firstItem="Ebr-JT-d50" firstAttribute="trailing" secondItem="385-j2-6Mw" secondAttribute="trailing" id="Mbt-zL-DPc"/>
+                <constraint firstItem="Ebr-JT-d50" firstAttribute="trailing" secondItem="wwT-LN-3hB" secondAttribute="trailing" constant="25" id="UBt-ZU-DQM"/>
+                <constraint firstItem="385-j2-6Mw" firstAttribute="leading" secondItem="Ebr-JT-d50" secondAttribute="leading" id="V8v-wP-LFR"/>
+                <constraint firstItem="wwT-LN-3hB" firstAttribute="top" secondItem="Ebr-JT-d50" secondAttribute="top" constant="11" id="dIo-AW-C1X"/>
+                <constraint firstItem="385-j2-6Mw" firstAttribute="top" secondItem="wwT-LN-3hB" secondAttribute="bottom" constant="11" id="z8E-hT-LJc"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="123.91304347826087" y="-12.723214285714285"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="KBlackColor">
+            <color red="0.10980392156862745" green="0.11764705882352941" blue="0.12941176470588237" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
