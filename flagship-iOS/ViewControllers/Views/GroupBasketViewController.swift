@@ -37,9 +37,9 @@ final class GroupBasketViewController: UIViewController, SarySectionViewContolle
     
     private func setupUI() {
         nameLabel.text = viewModel.getTitle
-        collectionView.register(UINib(nibName: "\(BasketCell.self)", bundle: nil), forCellWithReuseIdentifier: "\(BasketCell.self)")
+        collectionView.register(UINib(nibName: "\(GroupCell.self)", bundle: nil), forCellWithReuseIdentifier: "\(GroupCell.self)")
         let layout = UICollectionViewFlowLayout()
-        layout.itemSize = CGSize(width: 64, height: 105)
+        layout.itemSize = CGSize(width: 75, height: 106)
         layout.minimumInteritemSpacing = 20
         layout.minimumLineSpacing = 24
         layout.scrollDirection = .vertical
@@ -51,7 +51,7 @@ final class GroupBasketViewController: UIViewController, SarySectionViewContolle
         viewModel.basketUIModel
             .bind(to: collectionView.rx.items) { collectionView, index, item in
                 let indexPath = IndexPath(item: index, section: 0)
-                let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "\(BasketCell.self)", for: indexPath) as! BasketCell
+                let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "\(GroupCell.self)", for: indexPath) as! GroupCell
                 cell.setupUI(basket: item)
                 return cell
             }

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="GroupCell" id="I0H-L4-T0v" customClass="GroupCell" customModule="flagship_iOS" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="75" height="106"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="75" height="106"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="asU-yA-Hkd" customClass="UIViewX" customModule="flagship_iOS" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="75" height="106"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="MHx-4J-lNQ" customClass="CustomImageView" customModule="flagship_iOS" customModuleProvider="target">
+                                <rect key="frame" x="2" y="2" width="71" height="102"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="MHx-4J-lNQ" firstAttribute="top" secondItem="asU-yA-Hkd" secondAttribute="top" constant="2" id="AnK-zl-hve"/>
+                            <constraint firstAttribute="width" constant="75" id="BND-OF-PBh"/>
+                            <constraint firstAttribute="trailing" secondItem="MHx-4J-lNQ" secondAttribute="trailing" constant="2" id="L3Y-SC-yC9"/>
+                            <constraint firstAttribute="bottom" secondItem="MHx-4J-lNQ" secondAttribute="bottom" constant="2" id="Wrg-ph-OxK"/>
+                            <constraint firstAttribute="height" constant="106" id="k6c-rt-N3O"/>
+                            <constraint firstItem="MHx-4J-lNQ" firstAttribute="leading" secondItem="asU-yA-Hkd" secondAttribute="leading" constant="2" id="sHM-c4-Age"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="8"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="VqC-rm-JZg"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="asU-yA-Hkd" secondAttribute="trailing" id="Cwp-Rl-mpt"/>
+                <constraint firstItem="asU-yA-Hkd" firstAttribute="top" secondItem="I0H-L4-T0v" secondAttribute="top" id="E15-vp-RGI"/>
+                <constraint firstAttribute="bottom" secondItem="asU-yA-Hkd" secondAttribute="bottom" id="FeR-6T-hRh"/>
+                <constraint firstItem="asU-yA-Hkd" firstAttribute="leading" secondItem="I0H-L4-T0v" secondAttribute="leading" id="h3B-dn-dPQ"/>
+            </constraints>
+            <size key="customSize" width="104" height="186"/>
+            <connections>
+                <outlet property="basketItemImageView" destination="MHx-4J-lNQ" id="l7a-eP-qI6"/>
+            </connections>
+            <point key="canvasLocation" x="176.81159420289856" y="131.25"/>
+        </collectionViewCell>
+    </objects>
+</document>

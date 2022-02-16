@@ -18,6 +18,10 @@ enum SaryHomeUIModel {
         return true
     }
     
+    var banners: [Banner] {
+        guard case let .banner(banners) = self else { return [] }
+        return banners
+    }
 }
 
 extension SaryHomeUIModel: Equatable {

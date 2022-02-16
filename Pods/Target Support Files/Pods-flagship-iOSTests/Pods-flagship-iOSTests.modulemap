@@ -1,4 +1,4 @@
-framework module Pods_flagship_iOSTests {
+module Pods_flagship_iOSTests {
   umbrella header "Pods-flagship-iOSTests-umbrella.h"
 
   export *

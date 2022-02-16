@@ -17,7 +17,8 @@ final class SaryHomeViewModel: SaryHomeViewModelProtocol {
     private let disposeBag = DisposeBag()
 
     let dataSource = BehaviorRelay<SaryHomeUIModel>(value: .loading)
-    
+    var testBanners: [Banner]!
+    var testBaskets: [Basket]!
 
     // MARK: viewModel init
     init(service: APIServiceProtocol) {
@@ -36,12 +37,13 @@ final class SaryHomeViewModel: SaryHomeViewModelProtocol {
             }
             if let banners = banners {
                 self?.dataSource.accept(.banner(banners: banners))
+                self?.testBanners = banners
             }
             if let baskets = baskets {
+                self?.testBaskets = baskets
                 baskets.forEach {
                     let type = SaryHomeSectionType(rawValue: $0.dataType!)!
                     self?.dataSource.accept(.section(route: type, basket: $0))
-                    print("\(type.rawValue) - \($0.data.count)")
                 }
             }
         })

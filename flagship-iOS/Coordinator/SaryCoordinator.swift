@@ -13,7 +13,7 @@ final class SaryCoordinator {
     let window: UIWindow?
     
     lazy var rootViewController: UINavigationController = {
-        return UINavigationController(rootViewController: SaryHomeViewController(viewModel: SaryHomeViewModel(service: APIService())))
+        return SaryNavigationController(rootViewController: SaryHomeViewController(viewModel: SaryHomeViewModel(service: APIService())))
     }()
     
 
@@ -26,6 +26,7 @@ final class SaryCoordinator {
         guard let window = window else {
             return
         }
+        Localizer.doExchange()
         window.rootViewController = rootViewController
         window.makeKeyAndVisible()
     }

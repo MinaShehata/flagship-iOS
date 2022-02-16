@@ -26,3 +26,8 @@ struct Banner: Codable {
     let link: String
     let level: String
 }
+extension Banner: Equatable {
+    static func == (lhs: Banner, rhs: Banner) -> Bool {
+        return lhs.id == rhs.id
+    }
+}

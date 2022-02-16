@@ -1,0 +1,10 @@
+/* 
+  PhotoLibraryServices.strings
+  Vootly-iOS
+
+  Created by Mina Shehata on 6/29/19.
+  Copyright © 2019 Vootly. All rights reserved.
+*/
+"PHOTOS" = "Photos";
+"CAMERA_ROLL" = "Camera roll";
+"ALL_SCREENSHOTS" = "Screenshots";

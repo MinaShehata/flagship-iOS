@@ -14,6 +14,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var saryCoordinator: SaryCoordinator!
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        Language.setAppLanguage(lang: "en")
         window = UIWindow()
         saryCoordinator = SaryCoordinator(window: window)
         saryCoordinator.start()
